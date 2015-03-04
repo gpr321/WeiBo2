@@ -1,0 +1,33 @@
+//
+//  WBPrefixHeader.pch
+//  翻版新浪微博
+//
+//  Created by mac on 15-2-20.
+//  Copyright (c) 2015年 gpr. All rights reserved.
+//
+
+#ifndef _______WBPrefixHeader_pch
+#define _______WBPrefixHeader_pch
+
+// 全局头文件
+#import "WBConst.h"
+
+#ifdef DEBUG
+#define WBLog(...) NSLog(__VA_ARGS__)
+#else
+#define WBLog(...)
+#endif
+
+// 随机色
+#define GPRGB(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define GPARGB(a,r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#define WBGlobalColor GPRGB(211,211,211)
+
+// 随机色
+#define GPRandomColor GPRGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#define iOS8 [UIDevice currentDevice].systemVersion.floatValue >= 8.0
+
+#endif
